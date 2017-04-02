@@ -1,0 +1,20 @@
+Chess Heathens 
+By: Karandeep Singh
+
+Instructions
+
+1. Player 1 is Red nad Player 2 is Grey
+2. Moves must be Correct for each peice ( eg pawn can only move 1 step forward and cut diagonally ) as there is no safegaurd against wrong moves yet
+3. Watch out for "Peice Cut!!" on the input screen, when one player cuts the other's peice 
+4. Valid Location format : <horizontal,vertical>
+	A3 or B5 or D7 
+5. Valid Piece format: <Peice code, Peice Number>
+	P3, H1, K, Qm E1, E0
+6. Peice Codes:
+	P : Pawn
+	H : Horse
+	Q : Queen
+	K : King
+	E : Elephant
+	B : Bishop
+
