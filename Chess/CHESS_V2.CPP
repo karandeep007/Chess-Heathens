@@ -1,4 +1,5 @@
 #include<conio.h>
+#include<process.h>
 #include<stdio.h>
 #include<dos.h>
 #include<math.h>
@@ -80,13 +81,13 @@ void main()
 		return;
 
 	}
-	printf("\nCHESS HEATHENS by Karandeep Singh\n\n");
-	printf("X in Peice to exit\n\n");
 	init(); //establish values for everything
 	super_plot();
+	gotoxy(1,8);
 	count=0;
 	while(1)
 	{
+
 		if(count%2==0)
 		{
 			printf("Player 1\nPeice: ");
@@ -114,6 +115,7 @@ void main()
 		}
 		cleardevice();
 		super_plot();
+		gotoxy(1,8);
 		count++;
 
 
@@ -181,6 +183,10 @@ void init()
 void super_plot()
 {
 	int i,pl;
+	gotoxy(1,1);
+	printf("\nCHESS HEATHENS by Karandeep Singh\n\n");
+	printf("X in Peice to exit\n\n");
+
 	draw_board();
 	for(pl=0;pl<2;pl++)
 	{
@@ -885,8 +891,9 @@ void handler(char what[10],char where[10],int play)
 		kin1[play].co.h=loc_h;
 		translate(x,y,peice_name,peice_no,play);
 	}
-	delay(500);
+
 	eliminate(loc_h,loc_v,play);
+	delay(700);
 
 
 }
@@ -976,9 +983,8 @@ void eliminate(char c_h, int c_v, int play)
 			loc_h=kin1[pl_nxt].co.h;
 				if(loc_v==c_v &&loc_h==c_h)
 				{
-					flag=1;
+					flag=2;
 					translate(1000,1000,'K',0,pl_nxt);
-					break;
 				}
 
 		}
@@ -993,7 +999,6 @@ void eliminate(char c_h, int c_v, int play)
 				{
 					flag=1;
 					translate(1000,1000,'Q',0,pl_nxt);
-					break;
 				}
 
 		}
@@ -1001,9 +1006,16 @@ void eliminate(char c_h, int c_v, int play)
 		if(flag==1)
 		{
 			printf("Peice Cut!!\n\n");
-			delay(500);
 			break;
 		}
+		else if(flag==2)
+		{
+			printf("\n\nPlayer %d loses!!\n GAME OVER\n\n",pl_nxt);
+			delay(3000);
+			exit(0);
+			break;
+		}
+
 
 	}
 }
