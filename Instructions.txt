@@ -1,20 +1,31 @@
 Chess Heathens 
 By: Karandeep Singh
 
-Instructions
+Dependencies :
+	
+	Requires a C++ complier that runs graphics.h 
+	
+A. How to Install and run
 
-1. Player 1 is Red nad Player 2 is Grey
-2. Moves must be Correct for each peice ( eg pawn can only move 1 step forward and cut diagonally ) as there is no safegaurd against wrong moves yet
-3. Watch out for "Peice Cut!!" on the input screen, when one player cuts the other's peice 
-4. Valid Location format : <horizontal,vertical>
-	A3 or B5 or D7 
-5. Valid Piece format: <Peice code, Peice Number>
-	P3, H1, K, Qm E1, E0
-6. Peice Codes:
-	P : Pawn
-	H : Horse
-	Q : Queen
-	K : King
-	E : Elephant
-	B : Bishop
+	1.For Turbo C++ users clone the Chess_V2.cpp file and open it in IDE
+	2.Change Directory to "C:\TC\BGI" or "C:\TURBOC3\BGI" Else it give an error "Graphics error device driver not found"
+	3.Run
+	
+
+B. Gameplay Instructions
+
+	1. Player 1 is Red and Player 2 is Grey
+	2. Moves must be Correct for each peice ( eg pawn can only move 1 step forward and cut diagonally ) as there is no safegaurd against wrong moves yet
+	3. Watch out for "Peice Cut!!" on the input screen, when one player cuts the other's peice 
+	4. Valid Location format : <horizontal,vertical>
+		A3 or B5 or D7 
+	5. Valid Piece format: <Peice code, Peice Number>
+		P3, H1, K, Q, E1, E0
+	6. Peice Codes:
+		P : Pawn
+		H : Horse
+		Q : Queen
+		K : King
+		E : Elephant
+		B : Bishop
 
